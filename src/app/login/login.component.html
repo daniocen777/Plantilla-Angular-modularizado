@@ -1,0 +1,86 @@
+<div class="main-div">
+  <div>
+    <mat-card class="example-card">
+      <mat-card-content style="text-align: center;">
+        <img src="../../assets/dani_logo.png" class="mat-card-avatar" />
+        <h1>Bienvenido</h1>
+        <form class="example-form">
+          <table class="example-full-width" cellspacing="0" WIDTH="300">
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Usuario" name="user" required />
+                  <mat-icon matSuffix>supervised_user_circle</mat-icon>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input
+                    matInput
+                    placeholder="Password"
+                    [type]="hide ? 'text' : 'password'"
+                    name="password"
+                    required
+                  />
+                  <mat-icon matSuffix (click)="hide = !hide">{{
+                    hide ? "visibility" : "visibility_off"
+                  }}</mat-icon>
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+          routerLink="user"
+          mat-raised-button
+          class="block"
+          color="primary"
+        >
+          Ingresar
+        </button>
+      </mat-card-actions>
+      <mat-card-actions>
+        <div class="link_center">
+          <a class="link_center" href="#" routerLink="/recover-password"
+            >¿Olvidaste tu contraseña?</a
+          >
+        </div>
+      </mat-card-actions>
+      <!-- Botones regisdtro por medios sociales -->
+      <!-- Facebook -->
+      <mat-card-actions>
+        <div class="link_center">
+          <button
+            mat-icon-button
+            style="width: 60px; height: 60px; color: #5c5ac7;"
+          >
+            <i class="fab fa-facebook" style="font-size: 25px;"></i>
+          </button>
+          <button
+            mat-icon-button
+            style="width: 60px; height: 60px; color: #9e3333;"
+          >
+            <i class="fab fa-google" style="font-size: 25px;"></i>
+          </button>
+          <button
+            mat-icon-button
+            style="width: 60px; height: 60px; color: #706f6f;"
+          >
+            <i class="fab fa-apple" style="font-size: 25px;"></i>
+          </button>
+        </div>
+      </mat-card-actions>
+      <!-- Gmail -->
+
+      <!-- <mat-card-actions>
+            <div class="link_center">
+              ¿Aún no eres miembro? <a href="#" routerLink="/register-user">Regístrate</a>
+            </div>
+          </mat-card-actions> -->
+    </mat-card>
+  </div>
+</div>

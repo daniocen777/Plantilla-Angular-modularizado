@@ -1,0 +1,15 @@
+<app-header (toggleSidebarOpened)="sidebarToggle()"></app-header>
+
+<mat-drawer-container>
+  <mat-drawer mode="over" [opened]="sidebarOpen">
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <!-- <mat-nav-list>
+      
+    </mat-nav-list> -->
+    <ng-content></ng-content>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<!-- <app-footer></app-footer> -->

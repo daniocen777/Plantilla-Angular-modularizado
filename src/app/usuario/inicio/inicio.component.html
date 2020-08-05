@@ -1,0 +1,28 @@
+<app-home>
+  <div style="width: 100%; height: 100%;">
+    <mat-grid-list
+      [cols]="columnastotales"
+      [style.height.px]="altocontenido"
+      [rowHeight]="altocontenido"
+      (window:resize)="onResize($event)"
+    >
+      <mat-grid-tile [colspan]="columnasizquierda" [rowspan]="1">
+        <div style="height: 100%; width: 100%;">
+          <app-panel-izquieda
+            (onClickMostrarPanelDerecha)="mostarPanelDerecha()"
+          ></app-panel-izquieda>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile
+        [colspan]="columnasderecha"
+        [rowspan]="1"
+        [style.height.px]="altocontenido"
+        class="panel-derecha"
+      >
+        <div style="height: 100%; width: 100%;">
+          <app-panel-derecha *ngIf="panelDerecha"></app-panel-derecha>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</app-home>

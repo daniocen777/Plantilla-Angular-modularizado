@@ -1,0 +1,13 @@
+<mat-action-list class="list">
+  <button class="list__button"
+    *ngFor="let usuario of usuarios"
+    mat-list-item
+    (click)="mostrarPanelDerecha(usuario)"
+  >
+    <h3 matLine>{{ usuario.nombre }} {{ usuario.apellido }}</h3>
+    <p matLine>
+      <span style="font-weight: bold;">correo: </span
+      ><span>{{ usuario.correo }} </span>
+    </p>
+  </button>
+</mat-action-list>
