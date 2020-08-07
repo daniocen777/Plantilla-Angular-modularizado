@@ -7,7 +7,7 @@ import { Usuario } from 'src/app/modelos/usuario.model';
   styleUrls: ['./panel-izquieda.component.scss'],
 })
 export class PanelIzquiedaComponent implements OnInit {
-  @Output() onClickMostrarPanelDerecha = new EventEmitter<void>();
+  @Output() onClickMostrarPanelDerecha = new EventEmitter<Usuario>();
   user1 = {
     id: 1,
     nombre: 'Lola',
@@ -40,6 +40,6 @@ export class PanelIzquiedaComponent implements OnInit {
 
   mostrarPanelDerecha(usuario: Usuario) {
     console.log(usuario);
-    this.onClickMostrarPanelDerecha.emit();
+    this.onClickMostrarPanelDerecha.emit(usuario);
   }
 }

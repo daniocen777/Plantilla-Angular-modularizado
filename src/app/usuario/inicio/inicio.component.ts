@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from 'src/app/modelos/usuario.model';
 
 @Component({
   selector: 'app-inicio',
@@ -11,6 +12,7 @@ export class InicioComponent implements OnInit {
   columnasderecha: number = 1;
   altocontenido: number = 0;
   panelDerecha: boolean = false;
+  usuario: Usuario = null;
 
   constructor() {}
 
@@ -47,7 +49,8 @@ export class InicioComponent implements OnInit {
     }
   }
 
-  mostarPanelDerecha() {
+  mostarPanelDerecha(event: Usuario) {
     this.panelDerecha = true;
+    this.usuario = event;
   }
 }

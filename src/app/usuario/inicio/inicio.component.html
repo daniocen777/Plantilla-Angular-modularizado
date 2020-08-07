@@ -9,7 +9,7 @@
       <mat-grid-tile [colspan]="columnasizquierda" [rowspan]="1">
         <div style="height: 100%; width: 100%;">
           <app-panel-izquieda
-            (onClickMostrarPanelDerecha)="mostarPanelDerecha()"
+            (onClickMostrarPanelDerecha)="mostarPanelDerecha($event)"
           ></app-panel-izquieda>
         </div>
       </mat-grid-tile>
@@ -20,7 +20,10 @@
         class="panel-derecha"
       >
         <div style="height: 100%; width: 100%;">
-          <app-panel-derecha *ngIf="panelDerecha"></app-panel-derecha>
+          <app-panel-derecha
+            *ngIf="panelDerecha"
+            [usuario]="usuario"
+          ></app-panel-derecha>
         </div>
       </mat-grid-tile>
     </mat-grid-list>

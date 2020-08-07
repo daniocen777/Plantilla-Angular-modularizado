@@ -10,6 +10,7 @@ import { PanelDerechaComponent } from './panel-derecha/panel-derecha.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 const routes: Routes = [{ path: '', component: InicioComponent }];
 
@@ -27,6 +28,7 @@ const routes: Routes = [{ path: '', component: InicioComponent }];
     MatButtonModule,
     MatListModule,
     MatIconModule,
+    MatCardModule,
   ],
 })
 export class UsuarioModule {}
